@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Novo Agro | Estrutura Estática</title>
+    <style>
+        /* --- Configurações Gerais (Preto e Branco Estático) --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --preto: #000000;
+            --grafite: #222222;
+            --cinza-medio: #757575;
+            --cinza-claro: #f0f0f0;
+            --branco: #ffffff;
+        }
+
+        body {
+            color: var(--preto);
+            background-color: var(--branco);
+            line-height: 1.6;
+        }
+
+        /* --- Barra Superior (Apenas Leitura) --- */
+        header {
+            background-color: var(--branco);
+            border-bottom: 2px solid var(--preto);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+        }
+
+        .nav-estatico {
+            display: flex;
+            gap: 20px;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 14px;
+            color: var(--preto);
+        }
+
+        /* --- Seção Hero --- */
+        .hero {
+            background-color: var(--preto);
+            color: var(--branco);
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin-top: 70px;
+            padding: 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            color: var(--cinza-claro);
+        }
+
+        .bloco-indicador {
+            display: inline-block;
+            background-color: var(--branco);
+            color: var(--preto);
+            padding: 12px 30px;
+            border: 2px solid var(--branco);
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        /* --- Seção de Dados --- */
+        .dados-section {
+            padding: 80px 20px;
+            background-color: var(--cinza-claro);
+            text-align: center;
+            border-bottom: 1px solid var(--preto);
+        }
+
+        .section-title {
+            font-size: 32px;
+            font-weight: 800;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+            letter-spacing: -1px;
+        }
+
+        .grid-dados {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card-dado {
+            background: var(--branco);
+            padding: 40px 20px;
+            border: 2px solid var(--preto);
+            text-align: left;
+        }
+
+        .card-dado h2 {
+            font-size: 36px;
+            font-weight: 800;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            border-bottom: 2px solid var(--preto);
+            padding-bottom: 5px;
+        }
+
+        /* --- Seção de Tecnologia --- */
+        .tech-section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .grid-tech {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .card-tech {
+            border: 2px solid var(--preto);
+            padding: 30px;
+            background-color: var(--branco);
+        }
+
+        .card-tech h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .card-tech p {
+            color: var(--grafite);
+        }
+
+        /* --- Rodapé --- */
+        footer {
+            background-color: var(--preto);
+            color: var(--branco);
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* --- Responsividade --- */
+        @media (max-width: 768px) {
+            .nav-estatico {
+                display: none;
+            }
+            .hero-content h1 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <div class="logo">Agro / Sustentável</div>
+            <div class="nav-estatico">
+                <span>Início</span>
+                <span>Indicadores</span>
+                <span>Tecnologia</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>A FORÇA DO AGRONEGÓCIO</h1>
+            <p>Uma análise sobre o papel do setor na economia global, o avanço tecnológico das agtechs e o compromisso com a preservação ambiental.</p>
+            <div class="bloco-indicador">Documento Informativo</div>
+        </div>
+    </section>
+
+    <section class="dados-section">
+        <h2 class="section-title">Impacto Econômico</h2>
+        <div class="grid-dados">
+            <div class="card-dado">
+                <h2>PIB</h2>
+                <p>Principal pilar da atividade econômica nacional, impulsionando o desenvolvimento regional.</p>
+            </div>
+            <div class="card-dado">
+                <h2>Balança</h2>
+                <p>Expressiva participação no comércio global e na geração de superávit comercial.</p>
+            </div>
+            <div class="card-dado">
+                <h2>Empregos</h2>
+                <p>Criação de postos de trabalho diretos e indiretos em toda a cadeia produtiva.</p>
+            </div>
+            <div class="card-dado">
+                <h2>Alimentos</h2>
+                <p>Garantia de segurança alimentar diante do crescimento populacional global.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="tech-section">
+        <h2 class="section-title" style="text-align: center;">Estrutura Tecnológica</h2>
+        
+        <div class="grid-tech">
+            <div class="card-tech">
+                <h3>Agricultura de Precisão</h3>
+                <p>Sensores e monitoramento via satélite para aplicação otimizada de insumos, reduzindo o desperdício.</p>
+            </div>
+            <div class="card-tech">
+                <h3>Irrigação Automatizada</h3>
+                <p>Sistemas baseados na umidade real do solo, garantindo eficiência hídrica e menor consumo elétrico.</p>
+            </div>
+            <div class="card-tech">
+                <h3>Sistemas de Drones</h3>
+                <p>Mapeamento de área total, identificação precoce de pragas e pulverização cirúrgica.</p>
+            </div>
+            <div class="card-tech">
+                <h3>Matriz Energética</h3>
+                <p>Aproveitamento de biomassa, resíduos orgânicos e geração solar para autossuficiência da propriedade.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Projeto AgroSustentável — Produção e Preservação.</p>
+    </footer>
+
+</body>
+</html>
